@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  width: 350px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 3px;
+}
+.center .header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 17px;
+}
+
+.center .inputElement {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 37px 0px 37px;
+}
+
+.inputElement .inputText {
+  padding: 8px;
+  font-size: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: rgb(244, 243, 243);
+  border: 2px solid rgb(220, 220, 220);
+}
+.inputText:focus {
+  outline: gray;
+}
+
+.inputButton {
+  background-color: #4cb5f9;
+  color: white;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border: none;
+}
+.inputButton:hover
+{
+    cursor: pointer;
+    background-color: #2974a7;
+    transition: 0.3s ease-in-out;
+}
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+.arrow {
+  background-color: rgb(202, 199, 199);
+  height: 1px;
+  width: 30%;
+}
+.content {
+  font-size: medium;
+  color: gray;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.social_icon {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social_icon button
+{
+    width: 80%;
+    background-color: #4da9e7;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    border: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+
+}
+.social_icon button:hover
+{
+    cursor: pointer;
+    background-color: #2974a7;
+    transition: 0.3s ease-in-out;
+}
+i{
+    font-size: 18px;
+    width: 14%;
+}
+.social_icon span a{
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.forgetPassword {
+    text-align: right;
+  color: rgb(32, 139, 239);
+  margin-bottom: 18px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer {
+  border: none;
+  padding: 25px;
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.footer span {
+  color: #4097d1;
+  font-weight: 400;
+}
+.footer p{
+    color: grey;
+}
+.lang
+{
+    text-align: center;
+}
+.lang select
+{
+    margin: 10px;
+    border: none;
+    color: gray;
+    font-size: 15px;
+}
+.lang:click
+{
+    border: none;
+}
+.meta
+{
+    border-top: 1px solid rgb(195, 195, 195);
+    border-bottom: 3px solid rgb(195, 195, 195, 0.3);
+    float: left;
+    width: 100%;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.meta span
+{
+    font-size: 10px;
+    color: grey;
+}
+.meta img
+{
+    width: 30%;
+    background: transparent;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.result
+{
+  color: rgb(128, 0, 34); 
+  font-size: 14px;
+  margin-top: 5px;
+}

